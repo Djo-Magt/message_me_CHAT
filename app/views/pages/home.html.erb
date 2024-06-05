@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1 class="ui header">CHAT</h1>
+<div class="ui cards">
+  <% @chatrooms.each do |chatroom| %>
+    <div class="card content">
+      <div class="content">
+        <%= link_to chatroom.name, chatroom_path(chatroom), class: "header" %>
+      </div>
+    </div>
+  <% end %>
+</div>

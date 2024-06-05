@@ -93,9 +93,6 @@ GEM
     bindex (0.8.1)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
-    bootstrap (5.3.3)
-      autoprefixer-rails (>= 9.1.0)
-      popper_js (>= 2.11.8, < 3)
     builder (3.2.4)
     capybara (3.40.0)
       addressable
@@ -147,6 +144,10 @@ GEM
     jbuilder (2.12.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jquery-rails (4.6.0)
+      rails-dom-testing (>= 1, < 3)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -181,7 +182,6 @@ GEM
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.5.6)
-    popper_js (2.11.8)
     psych (5.1.2)
       stringio
     public_suffix (5.0.5)
@@ -250,6 +250,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    semantic-ui-sass (2.4.4.0)
+      sassc
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -295,7 +297,6 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
-  bootstrap (~> 5.2)
   capybara
   debug
   devise
@@ -304,11 +305,13 @@ DEPENDENCIES
   font-awesome-sass (~> 6.1)
   importmap-rails
   jbuilder
+  jquery-rails
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.3, >= 7.1.3.3)
   sassc-rails
   selenium-webdriver
+  semantic-ui-sass
   simple_form!
   sprockets-rails
   stimulus-rails

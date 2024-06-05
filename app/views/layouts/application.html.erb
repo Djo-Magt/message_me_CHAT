@@ -10,9 +10,15 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body><%= render "shared/navbar" %>
-<%= render "shared/flashes" %>
-
-    <%= yield %>
+  <body>
+    <div class="ui small inverted menu">
+      <div class="ui container">
+        <%= render "shared/navbar" %>
+      </div>
+    </div>
+    <div class="ui container">
+      <%= render "shared/flashes" %>
+      <%= yield %>
+    </div>
   </body>
 </html>
