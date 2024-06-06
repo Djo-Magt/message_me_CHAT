@@ -8,3 +8,8 @@
   color: orange;
   margin-right: 10px; /* Adjust margin to move the nickname a bit more to the left */
 }
+
+#messages {
+  height: 15em;
+  overflow: auto;
+}

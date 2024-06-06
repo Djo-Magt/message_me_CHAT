@@ -1,6 +1,22 @@
-<div class="ui form">
-  <h2>Log in</h2>
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "ui form" }) do |f| %>
+
+
+
+
+
+<h2 class="ui center aligned large header">
+  Welcome to MessageMe - <em>a complete Chat App</em>
+</h2>
+
+<h4 class="ui center aligned medium icon header">
+  <i class="circular orange power off tiny icon"></i>
+  Log in to continue
+</h4>
+
+
+<div class="ui placeholder segment">
+  <div class="ui two column very relaxed stackable grid">
+    <div class="column">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "ui form" }) do |f| %>
     <div class="field">
       <%= f.label :email %>
       <%= f.email_field :email, required: false, autofocus: true, autocomplete: "email", class: "ui input" %>
@@ -18,10 +34,20 @@
       </div>
     <% end %>
 
+
     <div class="field">
       <%= f.submit "Log in", class: "ui button" %>
     </div>
   <% end %>
+    </div>
+    <div class="middle aligned column">
+      <div class="ui big orange button">
+        <i class="signup icon"></i>
+        <%= link_to "Sign up", new_registration_path(resource_name), style: "color: white;" %>
+      </div>
+    </div>
+  </div>
+  <div class="ui vertical divider">
+    Or
+  </div>
 </div>
-
-<%= render "devise/shared/links" %>

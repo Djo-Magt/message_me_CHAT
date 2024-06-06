@@ -7,9 +7,10 @@
 <div class="ui two column grid">
   <div class="twelve wide column">
     <div class="ui fluid raised card chatbox">
-      <div class="content">
-        <div class="ui feed" data-controller="chatroom-subscription"
-          data-chatroom-subscription-chatroom-id-value= <%= @chatroom.id%>
+      <div class="content" id="messages">
+        <div class="ui feed " data-controller="chatroom-subscription"
+          data-chatroom-subscription-chatroom-id-value = <%= @chatroom.id%>
+          data-chatroom-subscription-target="messages"
         >
           <% @chatroom.messages.each do |message| %>
             <%= render "messages/message", message: message  %>
